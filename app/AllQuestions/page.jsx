@@ -44,10 +44,13 @@ style={{
         <Link href={'/'}>
         <p 
         style={{
-          alignSelf:'center',
+          display: 'flex',
+          justifyContent: 'center',
+          alignItems: 'center',
           width: '100vw',
           height: '30vh',
-          fontSize: '5rem'
+          fontSize: '8rem',
+          backgroundColor: 'rgb(228, 230, 173)',
         }}
 
         >Nochmal</p>
