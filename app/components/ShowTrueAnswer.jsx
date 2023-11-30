@@ -1,8 +1,11 @@
 import React, { useEffect, useState } from 'react'
 
 export function ShowTrueAnswer({trueAnswer,setTrueAnswer}) {
-const [ opacity, setOpacity ] = useState(0)
+
+  const [ opacity, setOpacity ] = useState(0)
+
   window.scrollTo(0,0);
+
 useEffect(()=>{
   setTimeout(()=>{
 setOpacity(1)
@@ -29,7 +32,20 @@ setOpacity(1)
         onClick={()=>{
           setTrueAnswer(null)
         }}>weiter</button>
-        <b>{trueAnswer}</b>
+
+<div style={{
+            display: 'flex',
+            flexDirection: 'column',
+        }}>
+        {trueAnswer.map((line,lineIndex)=>{
+  return <b 
+key={'line-'+lineIndex}
+style={{
+    marginBottom: '1rem'
+}}>{line}</b>
+  })}
+          </div>
+          
         <button 
         style={{
           alignSelf:'center',
