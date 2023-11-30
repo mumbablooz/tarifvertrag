@@ -1,11 +1,9 @@
 'use client'
-import React,{useContext} from 'react'
+import React from 'react'
+import Link from 'next/link'
 import { questionArray } from '../questionArray'
-import { AndAgainContext } from '../context'
 
-export default function AllQuestions() {
-
-    let  {andAgain, setAndAgain}  = useContext(AndAgainContext)
+export default function AllQuestions() {   
 
     return (
     <section>
@@ -30,32 +28,30 @@ key={'question'+questionIndex}>
             }}>{(answerIndex+1)+'. Antwort'}</b>
 {answer.content.map((line,lineIndex)=>{
     
+
   return <p 
 key={'line-'+lineIndex}
 style={{
     marginBottom: '1rem'
 }}>{line}</p>
   })}  
-
            </div> 
         }
-
     })}
 </div>
             </div>)
         })}
-         <button 
+        <Link href={'/'}>
+        <p 
         style={{
           alignSelf:'center',
           width: '100vw',
           height: '30vh',
           fontSize: '5rem'
         }}
-        onClick={(e)=>{
-          e.target.style.backgroundColor='lightgreen'
-            setAndAgain(true)
-        }}
-        >Nochmal</button>
+
+        >Nochmal</p>
+        </Link> 
     </section>
   )
 }
