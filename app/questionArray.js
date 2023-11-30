@@ -7,11 +7,11 @@ export const questionArray = [
         isTrue: false
     },
     {
-        content:["Tarifkommissionen sind die für die Tarifarbeit der ver.di-Fachbereiche in den betroffenen Branchen und auf den jeweiligen Ebenen (Firmen-, regionale-, bundesweit geltende Tarifverträge) verantwortlichen Gremien. "],
+        content:["Tarifkommissionen sind die für die Tarifarbeit der Gewerkschafts-Fachbereiche (z. B. ver.di) in den betroffenen Branchen und auf den jeweiligen Ebenen (Firmen-, regionale-, bundesweit geltende Tarifverträge) verantwortlichen Gremien. "],
         isTrue: true
     },
     {
-        content:["Eine ver.di-Tarifkommission ist eine Arbeitsgruppe der Landesbezirksvorstände, die den Landesfachbereichsleiter*innen beratend zur Seite steht. "],
+        content:["Eine Gewerkschafts-Tarifkommission (z. B. ver.di) ist eine Arbeitsgruppe der Landesbezirksvorstände, die den Landesfachbereichsleiter*innen beratend zur Seite steht. "],
         isTrue: false
     }
     ]
@@ -23,7 +23,7 @@ export const questionArray = [
     {
         content:["Die Fachbereichsvorstände auf der Landesbezirks- bzw. der Bundesebene entscheiden ensprechend dem räumlichen und fachlichem Geltungsbereich über die Größe und Struktur der Tarifkommission. ",
          "Sie legen auch das Wahlverfahren fest.",
-         "Die Wahl der Mitglieder der Tarifkommissionen erfolgt möglichst dezentral durch Mitgliederversammlungen oder Konverenzen oder Delegiertenversammlungen, die die Mitglieder des Tarifbereichs vertreten. "],
+         "Die Wahl der Mitglieder der Tarifkommissionen erfolgt möglichst dezentral durch Mitgliederversammlungen oder Konverenzen oder Delegiertenversammlungen der Gewerkschaft, die die Mitglieder des Tarifbereichs vertreten. "],
         isTrue: true
     },
     {

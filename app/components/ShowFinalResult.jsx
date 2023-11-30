@@ -28,7 +28,7 @@ export function ShowFinalResult({points,questionArrayLength}) {
       backgroundColor: 'lightgreen',
       borderRadius: '1rem',
       padding: '1rem'
-     }}>Yeahhh, du bist Profi. Du konntest wirklich alle Fragen beantworten !!!</p>}
+     }}>Yeahhh, du bist Profi. Du konntest wirklich alle Fragen richtig beantworten !!!</p>}
         <p style={{
             marginBottom: '1rem'
         }}>Punkte: {points} / {questionArrayLength} </p>
