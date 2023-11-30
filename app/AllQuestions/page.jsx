@@ -1,35 +1,42 @@
 'use client'
-import React from 'react'
+import React,{useContext} from 'react'
 import { questionArray } from '../questionArray'
+import { AndAgainContext } from '../context'
+
 export default function AllQuestions() {
-  return (
+
+    let  {andAgain, setAndAgain}  = useContext(AndAgainContext)
+
+    return (
     <section>
+        
+        <h2 style={{
+            padding: '1rem',
+        }}>Alle Fragen und richtigen Antworten</h2>
 {questionArray.map((question,questionIndex)=>{
-return (<div key={'question'+questionIndex}>
-<b>{question.question}</b>
+
+return (<div 
+    style={{
+        borderBottom: '1rem solid rgb(228, 230, 173)',
+    }}
+key={'question'+questionIndex}>
+<h3>{question.question}</h3>
 <div>
     {question.answer.map((answer,answerIndex)=>{
         if(answer.isTrue){
             return <div key={'answer'+answerIndex}>
-            <b>{(answerIndex+1)+'.'}</b>
-    <p style={{
-        marginBottom: '1rem'
-    }}>{answer.content}</p>
-    <button 
-    style={{
+            <b style={{
+                fontSize: '1.5rem'
+            }}>{(answerIndex+1)+'. Antwort'}</b>
+{answer.content.map((line,lineIndex)=>{
     
-    }}
-    onClick={(e)=>{
-        if(answer.isTrue===true){
-            e.target.style.backgroundColor= 'green'
-            e.target.style.disabled = true
-            setPoints(rev=>rev+1)
-        } else {
-            e.target.style.backgroundColor= 'red'
-        }
-    
-        console.log(e.target)
-    }}>Auswählen</button>
+  return <p 
+key={'line-'+lineIndex}
+style={{
+    marginBottom: '1rem'
+}}>{line}</p>
+  })}  
+
            </div> 
         }
 
@@ -37,6 +44,18 @@ return (<div key={'question'+questionIndex}>
 </div>
             </div>)
         })}
+         <button 
+        style={{
+          alignSelf:'center',
+          width: '100vw',
+          height: '30vh',
+          fontSize: '5rem'
+        }}
+        onClick={(e)=>{
+          e.target.style.backgroundColor='lightgreen'
+            setAndAgain(true)
+        }}
+        >Nochmal</button>
     </section>
   )
 }

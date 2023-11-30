@@ -1,15 +1,17 @@
 'use client'
-import React,{useEffect, useState} from 'react'
+import React,{useEffect, useState, useContext} from 'react'
 import {ShowTrueAnswer} from './components/ShowTrueAnswer'
 import {ShowCurrentQuestion} from './components/ShowCurrentQuestion'
 import {ShowFinalResult} from './components/ShowFinalResult'
+import { AndAgainContext } from './context'
 
 export default function MultipleChoice({points,setPoints,questionArray}) {
     const [ trueAnswer, setTrueAnswer ] = useState(null)
     const [ currentQuestionIndex, setCurrentQuestionIndex ] = useState(0)
     const [ content, setContent ] = useState(null)
-    const [ andAgain, setAndAgain ] = useState(false)
     const questionArrayLength = questionArray.length
+
+    let  {andAgain, setAndAgain}  = useContext(AndAgainContext)
 
 useEffect(()=>{
 if(andAgain){
@@ -31,7 +33,7 @@ if(andAgain){
 
   setAndAgain(false)
 }
-},[andAgain,questionArray,setPoints,setTrueAnswer,setCurrentQuestionIndex])
+},[andAgain,setAndAgain,questionArray,setPoints,setTrueAnswer,setCurrentQuestionIndex])
 
     useEffect(()=>{
 if(trueAnswer){

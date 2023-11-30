@@ -21,24 +21,35 @@ export function ShowCurrentQuestion({question,setPoints,setTrueAnswer,setCurrent
         opacity: opacity,
         transition: '0.8s ease-in-out',
     }}>
-<b>{question.question}</b>
+<h3>{question.question}</h3>
 <div>
     {question.answer.map((answer, index)=>{
        return <div 
        key={'answer'+index}
+       id={'answer'+index}
        style={{
         marginBottom: '2rem',
        }}
        >
         <b>{(index+1)+'.'}</b>
-<p id={'answer-'+index}
+
+        <div style={{
+            display: 'flex',
+            flexDirection: 'column',
+        }}>
+        
+        {answer.content.map((line,lineIndex)=>{
+  return <p 
+key={'line-'+lineIndex}
+
 style={{
     marginBottom: '1rem'
-}}>{answer.content}</p>
-<button 
-style={{
+}}>{line}</p>
+  })}  
+        </div>    
 
-}}
+<button 
+
 onClick={(e)=>{
     if(answer.isTrue===true){
         e.target.style.backgroundColor= 'green'
