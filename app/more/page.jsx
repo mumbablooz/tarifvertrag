@@ -26,7 +26,7 @@ export default function More() {
     padding: '0.2rem',
 
 }}>
-<Link href={'https://www.igmetall.de/tarif/tariflexikon/tarifvertrag2'}>
+<Link href={'https://igmetall.de/tarif/tariflexikon/tarifvertrag2/'}>
 <p style={{
           backgroundColor: 'rgb(228, 230, 173)',
           borderRadius: '1rem',
