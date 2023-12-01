@@ -26,14 +26,15 @@ export default function More() {
     padding: '0.2rem',
 
 }}>
-<Link href={'https://igmetall.de/tarif/tariflexikon/tarifvertrag2/'}>
 <p style={{
           backgroundColor: 'rgb(228, 230, 173)',
           borderRadius: '1rem',
           padding: '1rem',
   
-        }}>Tarif Lexikon
-            </p></Link><p> der IG Metal Gewerkschaft</p>
+        }}>
+<Link href={'https://igmetall.de/tarif/tariflexikon/tarifvertrag2/'}>
+Tarif Lexikon
+            </Link></p><p> der IG Metal Gewerkschaft</p>
 </div>
 
     </section>
