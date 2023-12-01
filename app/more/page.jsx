@@ -1,5 +1,6 @@
 import React from 'react'
 import Link from 'next/link'
+import {linkArray} from './linkArray'
 
 export default function More() {
   return (
@@ -19,22 +20,28 @@ export default function More() {
 <p>über Tarifverträge</p>
         </div>
 
-<h3>Externe Links zu</h3>
+<h3>Externe Links:</h3>
 <div style={{
+
+}}>
+{linkArray.map((link,index)=>{
+return (<div 
+    key={'link-'+index}
+    style={{
     border: '0.4rem solid rgb(228, 230, 173)',
     borderRadius: '1rem',
     padding: '0.2rem',
-
+    marginBottom: '0.2rem',
 }}>
+<Link href={link.link}>
 <p style={{
           backgroundColor: 'rgb(228, 230, 173)',
           borderRadius: '1rem',
-          padding: '1rem',
-  
-        }}>
-<Link href={'https://igmetall.de/tarif/tariflexikon/tarifvertrag2/'}>
-Tarif Lexikon
-            </Link></p><p> der IG Metal Gewerkschaft</p>
+          padding: '1rem',  
+        }}>{link.name}
+            </p></Link><p>{link.company}</p>
+</div>)
+})}
 </div>
 
     </section>
