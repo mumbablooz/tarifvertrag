@@ -23,7 +23,7 @@ return (
      <div style={{
         marginLeft: '1rem'
      }}>
-     <p>{info.name}</p>
+     <b>{info.name}</b>
      <p>von: {info.from}</p>
      </div>
 
