@@ -11,14 +11,16 @@ export default function ShowYoutubeVideos() {
     }}>
 {infoArray.map((info,index)=>{
 return (
-    <div style={{
+    <div 
+    key={'youtube-'+index}
+    style={{
         display: 'flex',
         marginBottom: '1rem',
         padding: '0.2rem',
         borderBottom: '0.2rem solid rgb(228, 230, 173)',
     }}>
     <Youtube
-    key={'youtube-'+index}
+
      youtubeNr={info.youtube} />
      <div style={{
         marginLeft: '1rem'
