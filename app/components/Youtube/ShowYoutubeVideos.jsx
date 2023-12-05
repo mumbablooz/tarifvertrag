@@ -19,9 +19,7 @@ return (
         padding: '0.2rem',
         borderBottom: '0.2rem solid rgb(228, 230, 173)',
     }}>
-    <Youtube
-
-     youtubeNr={info.youtube} />
+    <Youtube youtubeNr={info.youtube} />
      <div style={{
         marginLeft: '1rem'
      }}>
