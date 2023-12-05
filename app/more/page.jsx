@@ -1,7 +1,7 @@
 import React from 'react'
 import Link from 'next/link'
 import {linkArray} from './linkArray'
-
+import ShowYoutubeVideos from '../components/youtube/ShowYoutubeVideos'
 export default function More() {
   return (
     <section style={{
@@ -42,6 +42,12 @@ return (<div
             </p></Link><p>{link.company}</p>
 </div>)
 })}
+</div>
+<div style={{
+    marginTop: '1rem'
+}}>
+    <h3>Lern Videos:</h3>
+    <ShowYoutubeVideos />
 </div>
 
     </section>
