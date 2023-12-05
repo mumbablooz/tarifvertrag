@@ -13,6 +13,10 @@ export function ShowCurrentQuestion({question,setPoints,setTrueAnswer,setCurrent
       setTimeout(()=>{
     setOpacity(1)
       },0)
+    } else {
+      setTimeout(()=>{
+    setOpacity(0)
+      },0)     
     }
     },[opacityNone])
 
@@ -52,14 +56,17 @@ style={{
 
 onClick={(e)=>{
     if(answer.isTrue===true){
+
         e.target.style.backgroundColor= 'green'
         e.target.style.disabled = true
-        if(attempt.current===0){
-            setPoints(rev=>rev+1)
-        }
-        setTrueAnswer(answer.content)
-        setCurrentQuestionIndex(rev=>rev+1)
-        attempt.current=0
+        setTimeout(()=>{
+            if(attempt.current===0){
+                setPoints(rev=>rev+1)
+            }
+            setTrueAnswer(answer.content)
+            setCurrentQuestionIndex(rev=>rev+1)
+            attempt.current=0
+        },1000)       
 
         setOpacityNone(true)
     } else {

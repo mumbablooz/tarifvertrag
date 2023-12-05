@@ -3,7 +3,7 @@ import React,{useEffect, useState, useContext} from 'react'
 import {ShowTrueAnswer} from './components/ShowTrueAnswer'
 import {ShowCurrentQuestion} from './components/ShowCurrentQuestion'
 import {ShowFinalResult} from './components/ShowFinalResult'
-import { AndAgainContext } from './context'
+import {AndAgainContext} from './context'
 
 export default function MultipleChoice({points,setPoints,questionArray}) {
     const [ trueAnswer, setTrueAnswer ] = useState(null)
@@ -20,7 +20,6 @@ if(andAgain){
   setPoints(0)
 
   setTimeout(()=>{
-
     setContent(<ShowCurrentQuestion       
         question={questionArray[0]} 
         setPoints={setPoints} 

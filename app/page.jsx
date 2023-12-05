@@ -1,14 +1,22 @@
 'use client'
-import { useState } from 'react'
+import { useState,useEffect } from 'react'
 import MultipleChoice from './MultipleChoice'
 import {questionArray} from './questionArray'
 
 export default function Home() {
 
+  const [ opacity, setOpacity ] = useState(0)
+ 
+  useEffect(()=>{
+setOpacity(1)
+},[])
+
 const [ points, setPoints ] = useState(0)
 
   return (
-    <main className="flex min-h-screen flex-col items-center p-2">
+    <main
+    style={{opacity: opacity}}
+    className="flex min-h-screen flex-col items-center p-2">
     <div style={{
           border: '1rem solid rgb(228, 230, 173)',
           borderRadius: '0.5rem',

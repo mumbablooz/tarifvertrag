@@ -2,7 +2,9 @@
 @tailwind components;
 @tailwind utilities;
 
-
+div,section{
+  transition: 5s ease-in-out;
+}
 a{
   text-decoration: none;
   color: black;
@@ -27,7 +29,7 @@ li{
   transition: 0.2s ease-in-out;
 }
 li:hover{
-  background-color: 	rgb(228, 230, 173);
+  background-color: 	rgb(222, 223, 191);
     transition: 0.2s ease-in-out;
     }
 li:active{
