@@ -1,7 +1,7 @@
 import React from 'react'
 import Youtube from './Youtube'
 import {infoArray} from '../../infoArray'
-
+import styles from './styles.module.css'
 export default function ShowYoutubeVideos() {
   return (
     <div style={{
@@ -19,14 +19,13 @@ return (
         padding: '0.2rem',
         borderBottom: '0.2rem solid rgb(228, 230, 173)',
     }}>
-   /* <Youtube youtubeNr={info.youtube} />*/
+    <Youtube youtubeNr={info.youtube} />
      <div style={{
         marginLeft: '1rem'
      }}>
-     <b>{info.name}</b>
-     <p>von: {info.from}</p>
+     <b className={styles.p}>{info.name}</b>
+     <p className={styles.p}>von: {info.from}</p>
      </div>
-
     </div>
 )
 })}

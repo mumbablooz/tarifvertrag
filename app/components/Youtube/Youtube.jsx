@@ -1,18 +1,25 @@
+'use client'
 import React from 'react'
+import YouTube from 'react-youtube'
 
-function Youtube({youtubeNr,youtubeEmbed}) {
-  return (
+function Youtube({youtubeNr}) {
+  const opts = {
+    height: '315',
+    width: '560',
+    playerVars: {
+      // https://developers.google.com/youtube/player_parameters
+      autoplay: 0,
+    },
+  };
 
-    <iframe
-    style={{
-      borderRadius: '1em',
-    }}
-    src={'https://www.youtube.com/embed/'+youtubeNr} 
-    title="YouTube video player"   
-    allowFullScreen />
+  function _onReady(event) {
+    // access to player in all event handlers via event.target
+    event.target.pauseVideo();
+  }
 
+  return <YouTube videoId={youtubeNr} opts={opts} onReady={_onReady} />;
 
-  )
 }
 
 export default Youtube
+ 
